@@ -101,30 +101,35 @@ class CartaoCredito:
         # Ele não é protegido ou oculto como em outras linguagens, como Java ou C++, que realmente implementam modificadores de acesso como private ou protected. 
         # O underline em Python é apenas uma convenção para indicar que o atributo ou método é "privado" ou "protegido", 
         # ou seja, é um aviso para que os desenvolvedores evitem acessá-lo diretamente, mas ainda assim é acessível diretamente.
-        
-# Programa
-conta_lira = ContaCorrente("Lira","111.222.333-45","334","1502")
+     
+     
+     
+# O if __name__ == '__main__': permite que eu rode os meus testes somente como script, ou seja, somente nesse arquivo.
+# ao executar o arquivo main esses testes não serão rodados no arquivo main
+if __name__ == '__main__':   
+    # Programa
+    conta_lira = ContaCorrente("Lira","111.222.333-45","334","1502")
 
-cartao_lira = CartaoCredito('Lira', conta_lira)
-print(cartao_lira.titular)
-print(cartao_lira.conta_corrente._num_conta) #pegou os parametros definidos na classe ContaCorrente
+    cartao_lira = CartaoCredito('Lira', conta_lira)
+    print(cartao_lira.titular)
+    print(cartao_lira.conta_corrente._num_conta) #pegou os parametros definidos na classe ContaCorrente
 
-print(cartao_lira.conta_corrente._num_conta)
-# print(conta_lira._cartoes[0].numero)
-print(conta_lira.cartoes)
-print(cartao_lira.validade)
-print(cartao_lira.numero)
-print(cartao_lira.cod_seguranca)
+    print(cartao_lira.conta_corrente._num_conta)
+    # print(conta_lira._cartoes[0].numero)
+    print(conta_lira.cartoes)
+    print(cartao_lira.validade)
+    print(cartao_lira.numero)
+    print(cartao_lira.cod_seguranca)
 
-# conta_lira._saldo = 1000000
-# print("esse é o novo saldo lira")
-# print(conta_lira._saldo)
+    # conta_lira._saldo = 1000000
+    # print("esse é o novo saldo lira")
+    # print(conta_lira._saldo)
 
-cartao_lira.senha = '12' # vai imprimir nova senha invalida pela RESTRIÇÃO DE 4 DIGITOS PARA SENHA 
-print(cartao_lira.senha)
+    cartao_lira.senha = '12' # vai imprimir nova senha invalida pela RESTRIÇÃO DE 4 DIGITOS PARA SENHA 
+    print(cartao_lira.senha)
 
-# __dict__ é um metodo para verificar todas as informações da classe (Aula 25)
-print(conta_lira.__dict__)
-print(cartao_lira.__dict__)
+    # __dict__ é um metodo para verificar todas as informações da classe (Aula 25)
+    print(conta_lira.__dict__)
+    print(cartao_lira.__dict__)
 
 
